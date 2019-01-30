@@ -24,6 +24,8 @@ In order to force it to rescan now, you can run
 
 `docker exec -it sslscan /root/runscan.sh`
 
+![Example result](https://www.stubdal.net/official/docker/sslscan.png)
+
 
 ## Credits
 
