@@ -18,12 +18,13 @@ Assuming your hosts.txt is in the current users home directory, and that you wan
 
 `stubdal/sslscan`
 
-It runs cron that will kick off a new scan every night at 01:00 AM
+It runs cron that will kick off a new scan every night at 01:00 AM which does a git pull on [#fuzzerman's ](https://twitter.com/fuzzerman) [sslscan script](https://github.com/NFCRing/sslscan) and then runs it.
 
-In order to force it to rescan now, you can run
+To scan immediately, run:
 
 `docker exec -it sslscan /root/runscan.sh`
 
+When done, you should ger results similar to this:
 ![Example result](https://www.stubdal.net/official/docker/sslscan.png)
 
 
@@ -31,4 +32,4 @@ In order to force it to rescan now, you can run
 
 Thanks to https://reglund.com for creating the Qualys sslscan wrapper, available at https://github.com/NFCRing/sslscan
 
-Thanks to https://www.qualys.com for their excellent ssl scanning system
+Thanks to https://www.qualys.com for their excellent [ssl scanning system](https://www.ssllabs.com/ssltest/)
