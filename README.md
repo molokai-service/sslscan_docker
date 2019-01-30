@@ -13,7 +13,10 @@ www.microsoft.com
 Assuming your hosts.txt is in the current users home directory, and that you want the results available on port 8080 on the host, you can start the container like this:
 
 `docker run -d --name sslscan -p 8080:80 \`
-`-v ~/hosts.txt:/root/git/sslscan/hosts.txt stubdal/sslscan`
+
+`-v ~/hosts.txt:/root/git/sslscan/hosts.txt \` 
+
+`stubdal/sslscan`
 
 It runs cron that will kick off a new scan every night at 01:00 AM
 
