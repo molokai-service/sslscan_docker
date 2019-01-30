@@ -1,0 +1,5 @@
+# m h dom mon dow user  command
+#run scan at 01:00 every night
+0  01  *  *  *  root perl /root/runscan.sh
+
+# empty line
