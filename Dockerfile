@@ -6,7 +6,7 @@ RUN apt-get install -y lighttpd perl git golang libjson-perl libdatetime-perl li
 RUN mkdir /root/sslscan && mkdir /var/www/html/json && mkdir ~/git && cd ~/git && git clone https://github.com/ssllabs/ssllabs-scan && git clone https://github.com/nfcring/sslscan && ls sslscan
 ADD index.html /var/www/html/.
 ADD start.sh /root/.
-RUN chmod 644 /var/www/html/* 
+RUN chmod 664 /var/www/html/* 
 RUN cd ~/git/ssllabs-scan && go build ssllabs-scan-v3.go
 RUN cp ~/git/sslscan/sslscan.css /var/www/html/. 
 RUN chmod +x /root/start.sh 
